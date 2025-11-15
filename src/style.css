@@ -1,0 +1,67 @@
+.hidden{
+  display: none !important;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: all;
+}
+
+/* hover effect even when disabled */
+.btn:disabled:hover {
+  background-color: #505050;  
+}
+
+#searchInput::placeholder {
+  color: #bbb;
+  opacity: 1;  
+}
+
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.btn-white{
+  background-color: black;
+  color: white;
+  border-color: white;
+}
+
+.btn-white:hover{
+  background-color: white;
+  color: black;
+}
+
+.btn-grey{
+  background-color: black;
+  color: white;
+  border-color: white;
+}
+
+.btn-grey:hover{
+  background-color: grey;
+  color: white;
+  border-color: grey;
+}
+
+.link-white-hover {
+  color: white;
+  text-decoration: none;
+}
+
+.link-white-hover:hover {
+  color: #f39c12;
+}
+
+.tag-badge {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.4rem;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-right: 0.2rem;
+}
