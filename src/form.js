@@ -18,7 +18,7 @@ let yourMessage = "your-message";
 // text-inserts
 insertBranchElement.textContent = branchSelect
 insertBranchNameElement.textContent = branchName
-// insertCommitElement.textContent = yourMessage
+insertCommitElement.textContent = yourMessage
 
 // ---------------------
 // Event Listeners
@@ -101,6 +101,14 @@ function copyTextCommitBranch(imgEl) {
 
 function copyTextPushBranch(imgEl) {
     navigator.clipboard.writeText(`git push -u origin ${branchSelect}/${branchName}`);
+    flashImage(imgEl, tempImgEl);
+    showCopyToast();
+}
+
+function copyTextMain(imgEl) {
+    navigator.clipboard.writeText(  `git add -A; ` +
+                                    `git commit -m "${yourMessage}"; ` +
+                                    `git push;`)
     flashImage(imgEl, tempImgEl);
     showCopyToast();
 }
