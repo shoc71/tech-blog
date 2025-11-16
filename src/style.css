@@ -65,3 +65,54 @@
   font-weight: bold;
   margin-right: 0.2rem;
 }
+
+#citation {
+  text-decoration: none;
+  color: white;
+  margin: 10px;
+}
+
+#citation:hover {
+  color: blue;
+}
+
+code {
+  /* background-color: #a8a8a8; */
+  /* color: palevioletred; */
+  border-radius: 5px;
+}
+
+/* custom settings set-up not available on bootstrap */
+
+#branch {
+  padding: 2px;
+}
+
+#copy {
+  background-color: rgb(201, 201, 201);
+  border: white;
+  border-radius: 5px;
+  width: 24px;
+  padding: 4px;
+}
+
+#copy:hover {
+  cursor: pointer;
+}
+
+#copy-toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: green;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+#copy-toast.show {
+    opacity: 1;
+}

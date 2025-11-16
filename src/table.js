@@ -13,7 +13,7 @@ let currentIndex = 0;
 const pageSize = 7;
 
 const postData = [
-  { name: "Common Commmands", date: "2025-10-20", tags: ["Reference", "INCOMPLETE"] },
+  { name: "Common Commands", date: "2025-10-15", tags: ["Reference", "INCOMPLETE"] },
   { name: "Smart Characters", date: "2025-10-22", tags: ["Hot Take", "INCOMPLETE"] },
   { name: "Social Status", date: "2025-11-11", tags: ["New", "INCOMPLETE"] },
 ];
@@ -85,6 +85,10 @@ function renderTable() {
   const totalPages = Math.ceil(filteredData.length / pageSize) || 1;
   pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
 }
+
+// ------------------
+// Event Listeners
+// ------------------
 
 // mouse clicks
 orderContentButton.addEventListener("click", () => {
