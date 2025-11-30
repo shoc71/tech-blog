@@ -6,6 +6,8 @@ const insertBranchElement = document.getElementById("insertBranch");
 const insertBranchNameElement = document.getElementById("insertBranchName");
 const yourMessageElement = document.getElementById("your-message");
 const insertCommitElement = document.getElementById("commit");
+const folderNameElement = document.getElementById("folder-name");
+const fileNameElement = document.getElementById("file-name");
 
 // hard-coded default values
 const delayInMilliSeconds = 2100
@@ -14,11 +16,15 @@ const tempImgEl = "../assets/images/copy-checked.png"
 let branchSelect = "features";
 let branchName = "branch-name";
 let yourMessage = "your-message";
+let fileName = 'file-name';
+let folderName = 'folder-name';
 
 // text-inserts
 insertBranchElement.textContent = branchSelect
 insertBranchNameElement.textContent = branchName
 insertCommitElement.textContent = yourMessage
+fileNameElement.textContent = fileName
+folderNameElement.textContent = folderName
 
 // ---------------------
 // Event Listeners
@@ -38,28 +44,13 @@ yourMessageElement.addEventListener("input", (event) => {
     insertCommitElement.textContent = yourMessage
 })
 
-// ---------------------
-// DOMContentLoader
-// ---------------------
-// function renderGitCommand() {
-//     const branch = localStorage.getItem("branch") || "";
-//     const branchName = localStorage.getItem("branchName") || "";
-//     const commitMsg = localStorage.getItem("commitMsg") || "";
+fileNameElement.addEventListener("input", (event) => {
+    fileName = event.target.value;
+})
 
-//     document.querySelectorAll(".insertBranch").forEach(el => {
-//         el.textContent = branch;
-//     });
-
-//     document.querySelectorAll(".insertBranchName").forEach(el => {
-//         el.textContent = branchName;
-//     });
-
-//     document.querySelectorAll(".commit").forEach(el => {
-//         el.textContent = commitMsg;
-//     });
-// }
-
-// window.addEventListener("DOMContentLoaded", renderGitCommand);
+folderNameElement.addEventListener("input", (event) => {
+    folderName = event.target.value;
+})
 
 // ---------------------
 // Functions
@@ -79,6 +70,18 @@ function flashImage(imgElement, tempSrc, duration = delayInMilliSeconds) {
     setTimeout(() => {
         imgElement.src = originalSrc;
     }, duration);
+}
+
+function copyTextFindFolderName(imgEl) {
+    navigator.clipboard.writeText(`find . -name "${folderName}" -type d`)
+    flashImage(imgEl, tempImgEl);
+    showCopyToast();
+}
+
+function copyTextFindFileName(imgEl) {
+    navigator.clipboard.writeText(`find . -name "${fileName}" -type f`)
+    flashImage(imgEl, tempImgEl);
+    showCopyToast();
 }
 
 function copyTextNewBranch(imgEl) {  

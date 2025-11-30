@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="../src/style.css">
-    <title>Intelligence</title>
+    <title>Common Computer Commands</title>
 </head>
 <body class="bg-black text-white min-vh-100">
     <div class="p-4"> <!-- w-50 for only big screens-->
@@ -58,6 +58,52 @@
             <p>
                 This is the hardest one yet... May take a while to fill this one up.
             </p>
+            <table class="table table-dark table-bordered">
+                <thead>
+                    <tr>
+                        <th>Testing</th>
+                        <th>Commands</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Finding Folders</td>
+                        <td class="d-flex justify-content-between align-items-center">
+                            <code>find . -name "<input 
+                                class="bg-dark text-white border border-secondary rounded" 
+                                type="text"
+                                maxlength="17"
+                                id="folder-name"
+                                placeholder="folder-name"
+                                >" -type d</code>
+                            <img 
+                                src="../assets/images/copy.png" 
+                                alt="copy"
+                                id="copy"
+                                onclick="copyTextFindFolderName(this)"
+                            >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Finding Files</td>
+                        <td class="d-flex justify-content-between align-items-center">
+                            <code>find . -name "<input 
+                                class="bg-dark text-white border border-secondary rounded" 
+                                type="text"
+                                maxlength="17"
+                                id="file-name"
+                                placeholder="file-name"
+                                >" -type f</code>
+                            <img 
+                                src="../assets/images/copy.png" 
+                                alt="copy"
+                                id="copy"
+                                onclick="copyTextFindFileName(this)"
+                            >
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
         <div class="m-2">
