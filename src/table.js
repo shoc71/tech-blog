@@ -14,7 +14,7 @@ const pageSize = 7;
 
 const postData = [
   { name: "Common Commands", date: "2025-10-15", tags: ["Reference", "INCOMPLETE"] },
-  { name: "Smart Characters", date: "2025-10-22", tags: ["Hot Take", "INCOMPLETE"] },
+  { name: "Tabbing Obsession", date: "2025-10-22", tags: ["WCAG", "INCOMPLETE"] },
   { name: "Social Status", date: "2025-11-11", tags: ["New", "INCOMPLETE"] },
 ];
 
@@ -29,6 +29,7 @@ const posts = Object.fromEntries(
 const tagColors = {
   "Analysis": "#1abc9c",
   "Hot Take": "#e74c3c",
+  "WCAG": "#194792",
   "New": "#3498db",
   "Idea": "#f1c40f",
   "Thought": "#9b59b6",
