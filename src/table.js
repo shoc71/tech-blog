@@ -1,7 +1,7 @@
 import { tagColors } from "../assets/tags/tagColor.js";
 import { postData } from "./pages.js";
 
-const displayTable = document.querySelector("#displayTable tbody");
+const displayTableData = document.querySelector("#displayTable tbody");
 
 // Create links dynamically
 const posts = Object.fromEntries(
@@ -19,7 +19,7 @@ const tableContents = postData.map((post, index) => ({
 }));
 
 function renderTable() {
-    displayTable.innerHTML = tableContents.map(row => `
+    displayTableData.innerHTML = tableContents.map(row => `
         <tr>
         <td>${row.id}</td>
         <td style="">${row.link}</td>
@@ -35,7 +35,6 @@ function renderTable() {
     `).join("");
 }
 
-// Initial render
 window.addEventListener("DOMContentLoaded", () => {
   renderTable();
 });
