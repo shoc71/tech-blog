@@ -8,7 +8,6 @@
   pointer-events: all;
 }
 
-/* hover effect even when disabled */
 .btn:disabled:hover {
   background-color: #505050;  
 }
@@ -77,12 +76,8 @@
 }
 
 code {
-  /* background-color: #a8a8a8; */
-  /* color: palevioletred; */
   border-radius: 5px;
 }
-
-/* custom settings set-up not available on bootstrap */
 
 #branch {
   padding: 2px;
@@ -113,6 +108,17 @@ code {
     pointer-events: none;
     transition: opacity 0.3s ease;
 }
+
 #copy-toast.show {
     opacity: 1;
+}
+
+.tag-badge {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.4rem;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-right: 0.2rem;
 }
