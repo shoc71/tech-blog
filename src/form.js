@@ -96,6 +96,13 @@ function copyTextAddBranch(imgEl) {
     showCopyToast();
 }
 
+function copyFixEmptyHead(imgEl) {
+    navigator.clipboard.writeText(`find .git/objects/ -type f -empty -delete;` + 
+                                    ` git fetch -p; git  --full;`)
+    flashImage(imgEl, tempImgEl);
+    showCopyToast();
+}
+
 function copyTextCommitBranch(imgEl) {
     navigator.clipboard.writeText(`git commit -m "${yourMessage}"`)
     flashImage(imgEl, tempImgEl);

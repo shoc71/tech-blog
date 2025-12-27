@@ -389,8 +389,58 @@
                             >
                         </td>
                     </tr>
+                    <tr>
+                        <td>
+                            Git status error object file is empty* 
+                            <a 
+                                href="https://stackoverflow.com/questions/11706215/how-can-i-fix-the-git-error-object-file-is-empty"
+                                target="_blank"
+                                rel="nonreffer"
+                                >
+                            (linux)
+                            </a>                            
+                        </td>
+                        <td class="d-flex justify-content-between align-items-center">
+                            <code>
+                                find .git/objects/ -type f -empty -delete; git fetch -p; git  --full;
+                            </code>
+                            <img 
+                                src="../assets/images/copy.png"
+                                alt="copy"
+                                id="copy"
+                                onclick="copyFixEmptyHead(this)"
+                            >
+                        </td>
+                    </tr>
                 </tbody>
             </table>
+            <ul>
+                <li>*Answer by 
+                    <a 
+                        href="https://stackoverflow.com/users/260026/martin-tajur"
+                        target="_blank"
+                        rel="nonreffer"
+                    >
+                        Martin Tajur
+                    </a>
+                    - Edited by
+                    <a 
+                        href="https://stackoverflow.com/users/124416/w00t"
+                        target="_blank"
+                        rel="nonreffer"
+                    >
+                        w00t
+                    </a>
+                    . 2nd popular answer on 
+                     <a 
+                        href="https://stackoverflow.com/questions/11706215/how-can-i-fix-the-git-error-object-file-is-empty"
+                        target="_blank"
+                        rel="nonreffer"
+                    >
+                    stackoverflow
+                    </a> 
+                    </li>
+            </ul>
         </div>
         <div id="copy-toast">Copied!</div>
     </div>

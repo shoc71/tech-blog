@@ -65,7 +65,7 @@
   margin-right: 0.2rem;
 }
 
-#citation {
+/* #citation {
   text-decoration: none;
   color: white;
   margin: 10px;
@@ -73,7 +73,7 @@
 
 #citation:hover {
   color: blue;
-}
+} */
 
 code {
   border-radius: 5px;
