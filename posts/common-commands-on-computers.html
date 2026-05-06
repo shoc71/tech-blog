@@ -412,6 +412,23 @@
                             >
                         </td>
                     </tr>
+                    <tr>
+                        <td>
+                            Git Hard reset to online branch (git checkout to branch first)                         
+                        </td>
+                        <td class="d-flex justify-content-between align-items-center">
+                            <code>
+                                git reset --hard origin/
+                                <span id="reset"></span>
+                            </code>
+                            <img 
+                                src="../assets/images/copy.png"
+                                alt="copy"
+                                id="copy"
+                                onclick="copyResetToRemote(this)"
+                            >
+                        </td>
+                    </tr>
                 </tbody>
             </table>
             <ul>

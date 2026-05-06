@@ -103,6 +103,12 @@ function copyFixEmptyHead(imgEl) {
     showCopyToast();
 }
 
+function copyResetToRemote(imgEl) {
+    navigator.clipboard.writeText(`git reset --hard origin/${branchName}`)
+    flashImage(imgEl, tempImgEl);
+    showCopyToast();
+}
+
 function copyTextCommitBranch(imgEl) {
     navigator.clipboard.writeText(`git commit -m "${yourMessage}"`)
     flashImage(imgEl, tempImgEl);
